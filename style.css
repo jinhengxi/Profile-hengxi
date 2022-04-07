@@ -1,0 +1,381 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+#navbar{
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+}
+.nav-logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.nav-logo a{
+    font-size: 36px;
+}
+.nav-menu{
+    display: flex;
+    margin: 0;
+}
+.nav-menu ul li {
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: var(--size-border-radius);
+    transition: 0.3s;
+}
+.nav-menu ul li:hover{
+    font-size: 20px;
+}
+
+.nav-toggle-btn{
+    position: absolute;
+    right: 32px;
+    color: white;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+
+#home{
+    background: url('images/bg-space.png') center/cover no-repeat;
+    padding: 120px 0 40px 0;
+    text-align: center;
+    color: white;
+}
+
+.home-title img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+.home-title h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.home-title h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.home-title button{
+    background-color: transparent;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+}
+.home-title button:hover{
+    cursor: pointer;
+
+}
+
+#about{
+    max-width: 1200px;
+    margin: auto;
+}
+.about{
+    padding: 80px;
+}
+
+.about-me{
+    text-align: center;
+}
+.about-me h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.about-me h2{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.about-skills{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+    text-align: center;
+}
+
+.about-icon{
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+    line-height: 170px;
+    margin: auto;
+    border: 2px solid rgb(3, 15, 31);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    transition: all 0.3s;
+    color: rgb(3, 15, 31);
+}
+
+.about-icon:hover{
+    transform: rotate(30deg);
+    font-size: 75px;
+    color: palevioletred;
+}
+.about-ottogi{
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+.about-ottogi img{
+    width: 100px;
+    height: 100px;
+}
+.about-skill p{
+    font-size: 18px;
+}
+
+#skill{
+    background-color: rgb(3, 15, 31);
+    color: white;
+    margin-top: 20px;
+}
+.skill{
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+.skill-title h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.skill-title h2{
+    font-size: 30px;
+}
+.skill-title p{
+    font-size: 20px;
+}
+.skill-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px;
+    background-color: #fff7d1;
+    color: rgb(3, 15, 31);
+}
+.skill-left{
+    flex-basis: 60%;
+    padding: 20px 40px;
+}
+.skill-right{
+    flex-basis: 40%;
+
+}
+.skill-title{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.skill-content{
+    display: flex;
+    justify-content: space-between;
+}
+.skill-bar{
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    margin-bottom: 30px;
+}
+.skill-value{
+    background-color: darkblue;
+    height: 3px;
+}
+
+.skill-tools{
+    padding: 20px;
+    background-color: #d8d1ac;
+}
+.skill-etc{
+    padding: 20px;
+    background-color: #d7cb8d;
+}
+.tools-title{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.etc-title{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#work{
+    text-align: center;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.work-title h1{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.work-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.work-contents{
+    border: 1px solid black;
+    padding: 10px 30px;
+    margin: 5px 5px;
+    border-radius: 20px;
+}
+.work-project{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.work-projects img{
+    width: 250px;
+}
+
+
+#testimonial{
+    text-align: center;
+    background-color: rgb(3, 15, 31);
+    color: white;
+    padding: 30px;
+}
+.testimonial{
+    max-width: 1200px;
+    margin: auto;
+}
+.testimonial-title{
+    margin: 30px 0;
+}
+.testimonial-title h1{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.testimonial-content{
+    display: flex;
+    align-items: center;
+}
+.testimonial-content img{
+    width: 100px;
+}
+.testimonial-content p{
+    font-size: 19px;
+}
+.testimonial-contents{
+    background-color: #fff7d1;
+    color: black;
+    margin: 10px 20px;
+    padding: 10px;
+}
+.testimonial-contents span{
+    color: gray;
+}
+
+#contact{
+    text-align: center;
+    padding: 40px;
+    margin: auto;
+    margin-top: 30px;
+}
+.contact{
+    max-width: 1200px;
+    margin: auto;
+}
+.contact-title h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.contact-title h2{
+    margin-bottom: 20px;
+}
+.contact-links i{
+    font-size: 50px;
+    margin: 0 10px;
+}
+.contact-rights{
+    margin: 20px 0;
+}
+
+/*For below 768px screen width*/
+@media screen and (max-width:768px) {
+    .nav-toggle-btn{
+        display: block;
+        top: 7px;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgb(3, 15, 31);
+        height: 40px;
+    }
+    .nav-menu{
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(3, 15, 31);
+        width: 100%;
+        display: none;
+    }
+    .nav-toggle-btn:hover{
+        cursor: pointer;
+    }
+    .about-skills{
+        flex-direction: column;
+        margin: 0;
+    }
+    .about-skill{
+        margin-top: 30px;
+    }
+    .about-icon{
+        margin: 0 auto;
+    }
+
+    .skill-box{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-content{
+        flex-direction: column;
+    }
+    .testimonial-content:nth-child(3){
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+/* JS style */
+#navbar.navbar-dark{
+    background-color: rgb(3, 15, 31);
+}
+
