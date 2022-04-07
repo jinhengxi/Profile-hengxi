@@ -1,25 +1,30 @@
 'use strict'
 
 const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height
+const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll',()=>{
-    if(window.scrollY > navbarHeight){
+    if( window.scrollY > navbarHeight ){
         navbar.classList.add('navbar-dark');
     }else{
-        navbar.classList.remove('navbar-dark');
-    }
-})
+        navbar.classList.remove('navbar-dark')
+    };
+});
 
-
-const navbarMenu = document.querySelector('.nav-menu')
-navbarMenu.addEventListener('click',(e)=>{
-    const target = e.target;
-    const link = target.dataset.link;
-    if( link == null ){
+navbar.addEventListener('click',(e)=>{
+    const target = e.target.dataset.link;
+    if( target == null ){
         return;
-    }
-    console.log(e.target.dataset.link)
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior : 'smooth' });
+    };
+    scrollIntoView(target);
+});
+
+const contactBtn = document.querySelector('.home-contact-btn');
+contactBtn.addEventListener('click',()=>{
+    scrollIntoView('#contact');
 })
+
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView( {behavior : 'smooth'} );
+}
