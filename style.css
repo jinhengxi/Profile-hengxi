@@ -21,6 +21,7 @@ ul{
     position: fixed;
     width: 100%;
     transition: all 0.3s;
+    z-index: 1;
 }
 .nav-logo{
     display: flex;
@@ -66,8 +67,11 @@ ul{
     padding: 120px 0 40px 0;
     text-align: center;
     color: white;
+    opacity: 1;
 }
-
+.home-title{
+    transition: all 0.5s;
+}
 .home-title img{
     border-radius: 50%;
     width: 250px;
@@ -378,4 +382,10 @@ ul{
 #navbar.navbar-dark{
     background-color: rgb(3, 15, 31);
 }
-
+.hello.active::after{
+    content: '';
+    height: 60px;
+    width: 4px;
+    background-color: white;
+    position: absolute;
+}
