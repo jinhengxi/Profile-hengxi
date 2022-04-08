@@ -20,7 +20,7 @@ ul{
     background-color: transparent;
     position: fixed;
     width: 100%;
-    transition: all 0.3s;
+    transition: all 0.5s;
     z-index: 1;
 }
 .nav-logo{
@@ -269,7 +269,6 @@ ul{
     width: 250px;
 }
 
-
 #testimonial{
     text-align: center;
     background-color: rgb(3, 15, 31);
@@ -345,9 +344,7 @@ ul{
         height: 45px;
     }
 
-    .nav-menu.open{
-        display: block;
-    }
+    
     .nav-menu{
         flex-direction: column;
         text-align: center;
@@ -356,6 +353,10 @@ ul{
         display: none;
     }
     
+    .nav-menu.open{
+        display: block;
+    }
+
     .nav-toggle-btn:hover{
         cursor: pointer;
     }
@@ -377,6 +378,7 @@ ul{
 
     .testimonial-content{
         flex-direction: column;
+        margin-bottom: 20px;
     }
     .testimonial-content:nth-child(3){
         flex-direction: column-reverse;

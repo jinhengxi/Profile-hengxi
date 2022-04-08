@@ -17,6 +17,9 @@ navbar.addEventListener('click',(e)=>{
     if( target == null ){
         return;
     };
+    navToggle.forEach((navToggles)=>{
+        navToggles.classList.remove('open')
+    })
     scrollIntoView(target);
 });
 
@@ -75,11 +78,6 @@ dynamic(selectArr())
 //     hello.classList.toggle('active')
 // },300)
 
-const navMenuBtn = document.querySelector('.nav-toggle-btn')
-const navMenu = document.querySelector('.nav-menu');
-navMenuBtn.addEventListener('click',()=>{
-    navMenu.classList.toggle('open')
-})
 
 
 const contentContainer = document.querySelector('.work-content');
@@ -110,7 +108,14 @@ contentContainer.addEventListener('click',(e)=>{
     },300)
 });
 
-// const workContent = document.querySelector('.work-contents');
-// workContent.addEventListener('click',()=>{
-//     workContent.classList.add('active');
-// })
+
+const navToggle = document.querySelectorAll('.nav-menu');
+const navToggleBtn = document.querySelector('.nav-toggle-btn')
+navToggleBtn.addEventListener('click',()=>{
+
+    navToggle.forEach((navToggles)=>{
+        navToggles.classList.toggle('open')
+    })
+    // navToggle[0].classList.toggle('open');
+    // navToggle[1].classList.toggle('open');
+});
