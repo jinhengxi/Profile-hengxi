@@ -256,12 +256,14 @@ ul{
     padding: 10px 30px;
     margin: 5px 5px;
     border-radius: 20px;
+    
 }
 .work-project{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
+    opacity: 1;
+    transition: all 0.3s;
 }
 .work-projects img{
     width: 250px;
@@ -340,7 +342,11 @@ ul{
         flex-direction: column;
         align-items: flex-start;
         background-color: rgb(3, 15, 31);
-        height: 40px;
+        height: 45px;
+    }
+
+    .nav-menu.open{
+        display: block;
     }
     .nav-menu{
         flex-direction: column;
@@ -349,6 +355,7 @@ ul{
         width: 100%;
         display: none;
     }
+    
     .nav-toggle-btn:hover{
         cursor: pointer;
     }
@@ -388,4 +395,34 @@ ul{
     width: 4px;
     background-color: white;
     position: absolute;
+}
+
+.arrow{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(3, 15, 31);;
+    cursor: pointer;
+    color: #fff7d1;
+    display: none;
+    border-radius: 50%;
+}
+.fa-arrow-up{
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+.work-contents.active{
+    background-color: #fff7d1;
+}
+.work-contents:hover{
+    cursor: pointer;
+    background-color: #fff7d1;
+}
+.work-project.opa{
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
 }

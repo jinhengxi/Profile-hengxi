@@ -1,12 +1,15 @@
 'use strict'
 
 const navbar = document.querySelector('#navbar');
+const arrow = document.querySelector('.arrow')
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
     if( window.scrollY > navbarHeight ){
         navbar.classList.add('navbar-dark');
+        arrow.style.display = 'block'
     }else{
         navbar.classList.remove('navbar-dark')
+        arrow.style.display = 'none'
     };
 });
 navbar.addEventListener('click',(e)=>{
@@ -16,6 +19,10 @@ navbar.addEventListener('click',(e)=>{
     };
     scrollIntoView(target);
 });
+
+arrow.addEventListener('click',()=>{
+    scrollIntoView('#home');
+})
 
 const contactBtn = document.querySelector('.home-contact-btn');
 contactBtn.addEventListener('click',()=>{
@@ -42,7 +49,6 @@ const hello = document.querySelector('.hello');
 function selectArr(){
     const string = "Hello, I'm Hengxi"
     const stringArr = string.split('')
-    console.log(stringArr)
     return stringArr;
 }
 
@@ -68,3 +74,43 @@ dynamic(selectArr())
 // setInterval(()=>{
 //     hello.classList.toggle('active')
 // },300)
+
+const navMenuBtn = document.querySelector('.nav-toggle-btn')
+const navMenu = document.querySelector('.nav-menu');
+navMenuBtn.addEventListener('click',()=>{
+    navMenu.classList.toggle('open')
+})
+
+
+const contentContainer = document.querySelector('.work-content');
+const projectContainer = document.querySelector('.work-project');
+const projects = document.querySelectorAll('.work-projects');
+
+contentContainer.addEventListener('click',(e)=>{
+    const filter = e.target.dataset.filter;
+
+    const workContent = document.querySelector('.work-contents.active');
+    workContent.classList.remove('active');
+    e.target.classList.add('active');
+
+
+    if( filter == null){
+        return;
+    }
+    projectContainer.classList.add('opa');
+    setTimeout(()=>{    
+    projects.forEach((project)=>{
+        if( filter === '*' || filter == project.dataset.type){
+            project.style.display = 'block';
+        }else{
+            project.style.display = 'none';
+        }
+    });
+        projectContainer.classList.remove('opa');
+    },300)
+});
+
+// const workContent = document.querySelector('.work-contents');
+// workContent.addEventListener('click',()=>{
+//     workContent.classList.add('active');
+// })
