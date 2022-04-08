@@ -265,6 +265,17 @@ ul{
     opacity: 1;
     transition: all 0.3s;
 }
+.work-projects{
+    margin: 10px 5px;
+    transition: all 0.5s;
+}
+.work-projects:hover{
+    background-color: #fff7d1;
+    border-radius: 5px;
+}
+
+
+
 .work-projects img{
     width: 250px;
 }
